@@ -1,8 +1,11 @@
 
 
+
 const About = () => {
   return (
-    <div>About</div>
+    <div className="flex-1">
+      about
+    </div>
   )
 }
 
