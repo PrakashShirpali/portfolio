@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, useLocation } from "react-router-dom"
 
 // import PublicLayout from "../layouts/PublicLayout"
 // import PrivateLayout from "../layouts/PrivateLayout"
@@ -10,24 +10,29 @@ import { Routes, Route } from "react-router-dom"
 // import { publicRoutes, privateRoutes } from "./routeConfig"
 import { routes } from "./routeConfig"
 import MainLayout from "@/layouts/MainLayout"
+import { AnimatePresence } from "framer-motion";
 
 export default function AppRoutes() {
+
+  const location = useLocation();
   return (
     <Suspense fallback={<div>Loading...</div>}>
 
-      <Routes>
+      <AnimatePresence mode="wait">
 
-        <Route element={<MainLayout />}>
-          {routes.map((route, index) => (
-            <Route
-              key={index}
-              path={route.path}
-              element={<route.component />}
-            />
-          ))}
-        </Route>
+        <Routes location={location} key={location.pathname}>
 
-        {/* <Route element={<PublicLayout />}>
+          <Route element={<MainLayout />}>
+            {routes.map((route, index) => (
+              <Route
+                key={index}
+                path={route.path}
+                element={<route.component />}
+              />
+            ))}
+          </Route>
+
+          {/* <Route element={<PublicLayout />}>
           {publicRoutes.map((route, index) => (
             <Route
               key={index}
@@ -37,7 +42,7 @@ export default function AppRoutes() {
           ))}
         </Route> */}
 
-        {/* <Route element={<ProtectedRoute />}>
+          {/* <Route element={<ProtectedRoute />}>
           <Route element={<PrivateLayout />}>
 
             {privateRoutes.map((route, index) => (
@@ -55,7 +60,9 @@ export default function AppRoutes() {
           </Route>
         </Route> */}
 
-      </Routes>
+        </Routes>
+
+      </AnimatePresence>
 
     </Suspense>
   )

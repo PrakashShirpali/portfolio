@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
+
       <div className="flex-1 flex items-center justify-around">
 
         <div className="diagonal bg-mtheme absolute inset-0 max-sm:hidden"></div>
