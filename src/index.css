@@ -8,6 +8,7 @@
 @theme inline {
   /* custom */
   --color-pbackground: var(--pbackground);
+  --color-pforeground: var(--pforeground);
   --color-mtheme: var(--mtheme);
   --color-icon-background: var(--icon-background);
   --color-icon-foreground: var(--icon-foreground);
@@ -58,9 +59,13 @@
 :root {
   /* custom */
   --pbackground: oklch(1 0 0);
+  --pforeground: oklch(0.51 0 0);
   --mtheme: oklch(0.82 0.17 78.45);
   --icon-background: oklch(0.95 0 0);
   --icon-foreground: oklch(0.51 0 0);
+
+  --font-open: Open Sans, sans-serif;
+  --font-poppin: Poppins, sans-serif;
 
   /* default */
   --background: oklch(1 0 0);
@@ -100,6 +105,7 @@
 .dark {
   /* custom */
   --pbackground: oklch(0.18 0 0);
+  --pforeground: oklch(1 0 0);
   --mtheme: oklch(0.82 0.17 78.45);
   --icon-background: oklch(0.29 0 0);
   --icon-foreground: oklch(0.9 0 0);
@@ -147,5 +153,11 @@
   }
   html {
     @apply font-sans;
+  }
+}
+
+@layer utilities {
+  .diagonal {
+    clip-path: polygon(0 0, 15% 0, 29% 100%, 0% 100%);
   }
 }

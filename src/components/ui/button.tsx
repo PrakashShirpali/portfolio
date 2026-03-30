@@ -9,10 +9,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        mine: "bg-mtheme rounded-full bold border-none",
-        default: "bg-icon-background text-icon-foreground hover:bg-mtheme hover:text-white group",
+        mine: "bg-mtheme rounded-full bold",
+        default: "bg-icon-background text-icon-foreground hover:bg-mtheme hover:text-white",
         outline:
-          "border-border bg-background shadow-xs hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
+          "border-border bg-icon-background shadow-xs hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:hover:bg-input/50 p-6 rounded-full",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80 aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
         ghost:
