@@ -7,7 +7,7 @@ const MainLayout = () => {
   return (
     <>
       <PageTransition>
-        <div className="min-h-screen flex bg-pbackground">
+        <div className="min-h-screen flex bg-pbackground max-md:flex-col">
           <main className="flex-1 flex">
             <Outlet />
           </main>

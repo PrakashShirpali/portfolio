@@ -17,7 +17,7 @@ export function ModeToggle() {
     <Button
       variant="outline"
       size="icon-lg"
-      className="relative"
+      className="relative max-md:fixed max-md:top-3 max-md:right-3"
       onClick={toggleTheme}
     >
       <Sun className="h-8 w-8 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90 size-0.5" />

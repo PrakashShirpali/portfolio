@@ -12,6 +12,8 @@
   --color-mtheme: var(--mtheme);
   --color-icon-background: var(--icon-background);
   --color-icon-foreground: var(--icon-foreground);
+  --color-icon-background-md: var(--icon-background-md);
+  --color-nav-background: var(--nav-background);
 
   /* default */
   --font-heading: var(--font-sans);
@@ -63,6 +65,8 @@
   --mtheme: oklch(0.82 0.17 78.45);
   --icon-background: oklch(0.95 0 0);
   --icon-foreground: oklch(0.51 0 0);
+  --icon-background-md: oklch(0.95 0 0);
+  --nav-background: oklch(1 0 0);
 
   --font-open: Open Sans, sans-serif;
   --font-poppin: Poppins, sans-serif;
@@ -109,6 +113,9 @@
   --mtheme: oklch(0.82 0.17 78.45);
   --icon-background: oklch(0.29 0 0);
   --icon-foreground: oklch(0.9 0 0);
+  --nav-background: oklch(0.29 0 0);
+
+  --icon-background-md: oklch(0.39 0 0);
 
   /* default */
   --background: oklch(0.145 0 0);
