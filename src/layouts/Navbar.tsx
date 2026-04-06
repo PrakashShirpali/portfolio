@@ -12,10 +12,6 @@ const Navbar = () => {
     { path: "/contact", label: "Contact", icon: MailOpen },
   ];
 
-  const base = "rounded-full p-2 md:group-hover:bg-mtheme md:group-hover:text-white md:group-hover:rounded-l-none size-13 border-none transition-all duration-50";
-  const active = "bg-mtheme max-md:bg-mtheme text-white";
-  const inactive = "";
-
   return (
     <div className="flex flex-col gap-y-8 pr-8 py-3 w-28 relative items-end max-md:pr-0 max-md:w-full">
       <ModeToggle />
@@ -29,20 +25,29 @@ const Navbar = () => {
                   <motion.div
                     initial="hidden"
                     whileHover="visible"
-                    className="flex items-center group overflow-hidden"
+                    className="flex group items-center overflow-hidden rounded-full md:hover:bg-mtheme md:hover:text-white"
                   >
                     <motion.span
                       variants={{
-                        hidden: { opacity: 0, x: 10 },
-                        visible: { opacity: 1, x: 0 }
+                        hidden: {
+                          opacity: 0,
+                          x: 57,
+                          transition: { duration: 0.1 }
+                        },
+                        visible: {
+                          opacity: 1,
+                          x: 0,
+                          transition: { duration: 0.4 }
+                        },
                       }}
-                      transition={{ duration: 0.10 }}
-                      className="whitespace-nowrap overflow-hidden text-lg bg-mtheme text-white rounded-l-full py-3 pl-3 font-semibold"
+
+                      className="whitespace-nowrap overflow-hidden bg-mtheme text-white text-lg rounded-full py-3 pl-4 font-semibold max-md:hidden"
                     >
                       {item.label}
                     </motion.span>
                     <Button
-                      className={`${base} ${isActive ? active : inactive}`}>
+                      className={`rounded-full p-2 size-13 border-none bg-icon-background text-icon-foreground md:group-hover:bg-mtheme md:group-hover:text-white transition-colors duration-10 ${isActive ? "bg-mtheme max-md:bg-mtheme text-white" : ""}`}
+                    >
                       <Icon strokeWidth={3} />
                     </Button>
                   </motion.div>

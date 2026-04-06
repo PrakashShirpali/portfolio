@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         mine: "bg-mtheme rounded-full bold",
-        default: "max-md:bg-icon-background-md bg-icon-background text-icon-foreground hover:bg-mtheme hover:text-white",
+        default: "max-md:bg-icon-background-md bg-icon-background text-icon-foreground",
         outline:
           "border-border bg-icon-background shadow-xs hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:hover:bg-input/50 p-6 rounded-full",
         secondary:
