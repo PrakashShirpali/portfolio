@@ -1,0 +1,1 @@
+import{j as t}from"./index-CdhRuphG.js";import{P as e}from"./PageHeader-JOn_gnqS.js";const a=()=>t.jsx("div",{className:"flex-1 max-md:pb-12",children:t.jsx(e,{first:"get in",second:"touch",third:"contact"})});export{a as default};

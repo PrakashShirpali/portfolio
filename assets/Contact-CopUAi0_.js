@@ -1,1 +1,0 @@
-import{j as t}from"./index-R6L0d4cv.js";import{P as e}from"./PageHeader-DGbuLMfO.js";const a=()=>t.jsx("div",{className:"flex-1 max-md:pb-12",children:t.jsx(e,{first:"get in",second:"touch",third:"contact"})});export{a as default};
