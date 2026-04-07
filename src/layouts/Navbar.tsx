@@ -25,19 +25,19 @@ const Navbar = () => {
                   <motion.div
                     initial="hidden"
                     whileHover="visible"
-                    className="flex group items-center overflow-hidden rounded-full md:hover:bg-mtheme md:hover:text-white"
+                    className="flex group items-center overflow-hidden rounded-full md:hover:bg-mtheme md:hover:text-white transition-colors duration-30"
                   >
                     <motion.span
                       variants={{
                         hidden: {
                           opacity: 0,
-                          x: 57,
-                          transition: { duration: 0.1 }
+                          x: 60,
+                          transition: { duration: 0 }
                         },
                         visible: {
                           opacity: 1,
                           x: 0,
-                          transition: { duration: 0.4 }
+                          transition: { duration: 0.3 }
                         },
                       }}
 
@@ -46,7 +46,7 @@ const Navbar = () => {
                       {item.label}
                     </motion.span>
                     <Button
-                      className={`rounded-full p-2 size-13 border-none bg-icon-background text-icon-foreground md:group-hover:bg-mtheme md:group-hover:text-white transition-colors duration-10 ${isActive ? "bg-mtheme max-md:bg-mtheme text-white" : ""}`}
+                      className={`rounded-full p-2 size-13 border-none bg-icon-background text-icon-foreground md:group-hover:bg-mtheme md:group-hover:text-white transition-colors duration-15 ${isActive ? "bg-mtheme max-md:bg-mtheme text-white" : ""}`}
                     >
                       <Icon strokeWidth={3} />
                     </Button>
