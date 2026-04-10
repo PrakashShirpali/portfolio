@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 export default function PageTransition({ children }: { children: React.ReactNode }) {
   return (
     <div className="overflow-hidden">
+
       {/* Sliding layer */}
       <motion.div
         initial={{ y: "0%" }}
@@ -11,7 +12,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
           duration: 0.5,
           ease: "easeOut"
         }}
-        className="fixed inset-0 bg-icon-background z-50"
+        className="fixed inset-0 bg-icon-background z-20"
       />
 
       {/* Page content */}
@@ -23,10 +24,11 @@ export default function PageTransition({ children }: { children: React.ReactNode
           duration: 0.6,
           ease: "easeOut"
         }}
-        className="relative"
+        className="relative min-h-screen flex"
       >
         {children}
       </motion.div>
+
     </div>
   )
 }

@@ -13,7 +13,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-y-8 pr-8 py-3 w-28 relative items-end max-md:pr-0 max-md:w-full">
+    <div className="flex-1 flex flex-col gap-y-8 pr-4 py-3 w-28 fixed right-0 h-screen items-end max-md:pr-0 max-md:w-full z-30">
       <ModeToggle />
       <ul className="absolute top-1/2 -translate-y-1/2 flex flex-col gap-y-3 items-end max-md:fixed max-md:bottom-0 max-md:top-auto max-md:translate-y-0 max-md:flex-row max-md:gap-x-3 max-md:bg-nav-background max-md:shadow-[0_0_47px_oklch(0.9_0_0)] dark:shadow-none max-md:w-full max-md:justify-evenly max-md:z-10 max-md:p-2">
         {navItems.map((item) => {
