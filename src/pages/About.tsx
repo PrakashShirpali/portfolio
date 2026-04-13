@@ -27,14 +27,14 @@ const About = () => {
   ];
 
   const skills = [
-    { name: "HTML", percent: 25 },
-    { name: "Javascript", percent: 89 },
-    { name: "CSS", percent: 70 },
-    { name: "PHP", percent: 66 },
-    { name: "Wordpress", percent: 95 },
-    { name: "Jquery", percent: 50 },
-    { name: "Angular", percent: 65 },
-    { name: "React", percent: 45 },
+    { name: "React", percent: 90 },
+    { name: "TypeScript", percent: 90 },
+    { name: "Tailwind CSS", percent: 90 },
+    { name: "Java", percent: 70 },
+    { name: "Laravel", percent: 80 },
+    { name: "PostgreSQL", percent: 70 },
+    { name: "GitHub", percent: 70 },
+    { name: "Docker", percent: 80 },
   ];
 
   return (

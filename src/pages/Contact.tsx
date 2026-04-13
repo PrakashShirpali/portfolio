@@ -1,9 +1,8 @@
 import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { MailOpen, Map, Phone } from "lucide-react";
-import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa";
-import { AiFillInstagram } from "react-icons/ai";
-import { IoLogoWhatsapp } from "react-icons/io";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { ContactForm } from "@/components/forms/contact-form";
 
 const Contact = () => {
 
@@ -31,25 +30,12 @@ const Contact = () => {
   const socialMedia = [
     {
       Sicon: FaGithub,
-      Slink: "github"
+      Slink: "https://github.com/PrakashShirpali"
     },
     {
       Sicon: FaLinkedin,
-      Slink: "linkedin"
+      Slink: "https://www.linkedin.com/in/prakashshirpali"
     },
-    {
-      Sicon: FaFacebookF,
-      Slink: "facebook"
-    },
-    {
-      Sicon: AiFillInstagram,
-      Slink: "instagram"
-    },
-    {
-      Sicon: IoLogoWhatsapp,
-      Slink: "whatsapp"
-    },
-
   ];
 
 
@@ -77,8 +63,8 @@ const Contact = () => {
           ))}
 
           <ul className="flex gap-x-4 max-md:mx-auto">
-            {socialMedia.map((media, index) => (
-              <li key={index}>
+            {socialMedia.map((media) => (
+              <li key={media.Slink}>
 
                 <a href={media.Slink} target="_blank" rel="noopener noreferrer">
                   <Button
@@ -94,15 +80,7 @@ const Contact = () => {
 
         </div>
 
-        {/* <div>
-          <div>
-            <Input></Input>
-            <Input></Input>
-          </div>
-          <Input></Input>
-          <Textarea></Textarea>
-          <PageButton Icon={Send} text="send message" />
-        </div> */}
+        <ContactForm />
       </div>
 
     </div>
