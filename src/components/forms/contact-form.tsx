@@ -8,9 +8,12 @@ import { useSendMessageMutation } from "@/store/api/contactApi"
 
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button"
 
 import { toast } from "sonner"
+import PageButton from "../PageButton"
+import { Send } from "lucide-react"
 
 export function ContactForm() {
 
@@ -53,7 +56,7 @@ export function ContactForm() {
 
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="space-y-6 max-w-xl"
+      className="space-y-6 max-w-8xl max-md:pb-22"
     >
       <input
         type="text"
@@ -61,7 +64,7 @@ export function ContactForm() {
         className="hidden"
       />
 
-      <div>
+      <div className="flex gap-x-6">
         <Input
           placeholder="Your Name"
           {...register("name")}
@@ -71,9 +74,7 @@ export function ContactForm() {
             {errors.name.message}
           </p>
         )}
-      </div>
 
-      <div>
         <Input
           placeholder="Your Email"
           {...register("email")}
@@ -85,38 +86,36 @@ export function ContactForm() {
         )}
       </div>
 
-      <div>
-        <Input
-          placeholder="Your Subject"
-          {...register("subject")}
-        />
-        {errors.subject && (
-          <p className="text-red-500 text-sm mt-1">
-            {errors.subject.message}
-          </p>
-        )}
-      </div>
+      <Input
+        placeholder="Your Subject"
+        {...register("subject")}
+      />
+      {errors.subject && (
+        <p className="text-red-500 text-sm mt-1">
+          {errors.subject.message}
+        </p>
+      )}
 
-      <div>
-        <Textarea
-          placeholder="Your Message"
-          className="min-h-[180px]"
-          {...register("message")}
-        />
-        {errors.message && (
-          <p className="text-red-500 text-sm mt-1">
-            {errors.message.message}
-          </p>
-        )}
-      </div>
+      <Textarea
+        placeholder="Your Message"
+        className="min-h-45"
+        {...register("message")}
+      />
+      {errors.message && (
+        <p className="text-red-500 text-sm mt-1">
+          {errors.message.message}
+        </p>
+      )}
 
-      <Button
+      <motion.button
         type="submit"
         disabled={isLoading}
-        className="w-full"
+        initial="rest"
+        whileHover="hover"
+        className="relative overflow-hidden border border-mtheme w-fit h-fit rounded-full flex items-center cursor-pointer group"
       >
-        {isLoading ? "Sending..." : "Send Message"}
-      </Button>
+        <PageButton Icon={Send} text={isLoading ? "Sending..." : "Send Message"} />
+      </motion.button>
 
     </form>
   )

@@ -44,9 +44,9 @@ const Contact = () => {
 
       <PageHeader first="get in" second="touch" third="contact" />
 
-      <div className="flex max-md:flex-col px-4 justify-evenly">
+      <div className="flex max-md:flex-col px-4 justify-evenly max-md:gap-y-12">
 
-        <div className="flex flex-col gap-y-6">
+        <div className="flex flex-col gap-y-6 max-w-lg">
           <h1 className="text-2xl max-md:text-center font-bold uppercase text-pforeground">
             Don't be shy !
           </h1>
