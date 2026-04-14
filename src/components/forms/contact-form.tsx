@@ -63,47 +63,55 @@ export function ContactForm() {
       />
 
       <div className="flex gap-x-6">
-        <Input
-          placeholder="Your Name"
-          {...register("name")}
-        />
-        {errors.name && (
-          <p className="text-red-500 text-sm mt-1">
-            {errors.name.message}
-          </p>
-        )}
+        <div>
+          <Input
+            placeholder="Your Name"
+            {...register("name")}
+          />
+          {errors.name && (
+            <p className="text-mtheme text-sm mt-1">
+              {errors.name.message}
+            </p>
+          )}
+        </div>
 
+        <div>
+          <Input
+            placeholder="Your Email"
+            {...register("email")}
+          />
+          {errors.email && (
+            <p className="text-mtheme text-sm mt-1">
+              {errors.email.message}
+            </p>
+          )}
+        </div>
+      </div>
+
+      <div>
         <Input
-          placeholder="Your Email"
-          {...register("email")}
+          placeholder="Your Subject"
+          {...register("subject")}
         />
-        {errors.email && (
-          <p className="text-red-500 text-sm mt-1">
-            {errors.email.message}
+        {errors.subject && (
+          <p className="text-mtheme text-sm mt-1">
+            {errors.subject.message}
           </p>
         )}
       </div>
 
-      <Input
-        placeholder="Your Subject"
-        {...register("subject")}
-      />
-      {errors.subject && (
-        <p className="text-red-500 text-sm mt-1">
-          {errors.subject.message}
-        </p>
-      )}
-
-      <Textarea
-        placeholder="Your Message"
-        className="min-h-45"
-        {...register("message")}
-      />
-      {errors.message && (
-        <p className="text-red-500 text-sm mt-1">
-          {errors.message.message}
-        </p>
-      )}
+      <div>
+        <Textarea
+          placeholder="Your Message"
+          className="min-h-45"
+          {...register("message")}
+        />
+        {errors.message && (
+          <p className="text-mtheme text-sm mt-1">
+            {errors.message.message}
+          </p>
+        )}
+      </div>
 
       <PageButton
         type="submit"

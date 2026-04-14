@@ -12,7 +12,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
           duration: 0.5,
           ease: "easeOut"
         }}
-        className="fixed inset-0 bg-icon-background z-20"
+        className="fixed inset-0 bg-icon-background z-20 pointer-events-none"
       />
 
       {/* Page content */}
