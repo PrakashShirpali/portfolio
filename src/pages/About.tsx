@@ -1,6 +1,5 @@
 
 import { HardDriveDownload } from "lucide-react";
-import { motion } from "framer-motion";
 import PageHeader from "@/components/PageHeader";
 import PageButton from "@/components/PageButton";
 import ShowCard from "@/components/ShowCard";
@@ -73,13 +72,7 @@ const About = () => {
           </div>
 
           <a href="/portfolio/PRAKASH_SHIRPALI_RESUME.pdf" target="blank">
-            <motion.div
-              whileHover="hover"
-              initial="rest"
-              className="relative overflow-hidden border border-mtheme w-fit h-fit rounded-full flex items-center cursor-pointer group"
-            >
-              <PageButton Icon={HardDriveDownload} text="download resume" />
-            </motion.div>
+            <PageButton Icon={HardDriveDownload} text="download resume" />
           </a>
 
         </div>

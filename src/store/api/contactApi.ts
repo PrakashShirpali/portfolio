@@ -10,7 +10,11 @@ export const contactApi = createApi({
   endpoints: (builder) => ({
     sendMessage: builder.mutation<boolean, ContactSchemaType>({
       async queryFn(data) {
-        const { error } = await supabase.from("contact_messages").insert(data);
+        const { website, ...safeData } = data;
+
+        const { error } = await supabase
+          .from("contact_messages")
+          .insert(safeData);
 
         if (error) {
           return { error };

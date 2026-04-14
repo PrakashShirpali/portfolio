@@ -8,7 +8,6 @@ import { useSendMessageMutation } from "@/store/api/contactApi"
 
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { motion } from "framer-motion";
 
 import { toast } from "sonner"
 import PageButton from "../PageButton"
@@ -106,15 +105,11 @@ export function ContactForm() {
         </p>
       )}
 
-      <motion.button
+      <PageButton
         type="submit"
-        disabled={isLoading}
-        initial="rest"
-        whileHover="hover"
-        className="relative overflow-hidden border border-mtheme w-fit h-fit rounded-full flex items-center cursor-pointer group"
-      >
-        <PageButton Icon={Send} text={isLoading ? "Sending..." : "Send Message"} />
-      </motion.button>
+        Icon={Send}
+        text={isLoading ? "Sending..." : "Send Message"}
+      />
 
     </form>
   )

@@ -2,13 +2,11 @@ import { Card } from "@/components/ui/card";
 import { ArrowRight, Minus } from "lucide-react";
 import prakash from "@/assets/images/prakash.jpeg"
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import PageButton from "@/components/PageButton";
 import { TypeAnimation } from "react-type-animation";
 
 
 const Home = () => {
-  const MotionLink = motion(Link);
   return (
     <div className="relative flex-1 flex justify-evenly items-center max-md:flex-col max-md:justify-start max-md:p-4">
 
@@ -47,16 +45,9 @@ const Home = () => {
           I'm an Indian based Software Engineer and Full Stack Developer who enjoys building efficient and reliable applications. I focus on writing clean, maintainable code and creating solutions that are practical, scalable, and user-friendly. I’m always learning, improving my problem-solving skills, and striving to build software that solves real-world problems.
         </p>
 
-        <MotionLink
-          to="/about"
-          initial="rest"
-          whileHover="hover"
-          className="relative overflow-hidden border border-mtheme w-fit h-fit rounded-full flex items-center cursor-pointer group"
-        >
-
+        <Link to="/about">
           <PageButton Icon={ArrowRight} text="more about me" />
-
-        </MotionLink>
+        </Link>
 
       </div>
 
