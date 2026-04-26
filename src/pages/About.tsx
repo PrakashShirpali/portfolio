@@ -71,7 +71,7 @@ const About = () => {
             ))}
           </div>
 
-          <a href="/portfolio/PRAKASH_SHIRPALI_RESUME.pdf" target="blank">
+          <a href="/portfolio/Prakash_Shirpali_Resume.pdf" target="blank">
             <PageButton Icon={HardDriveDownload} text="download resume" />
           </a>
 
