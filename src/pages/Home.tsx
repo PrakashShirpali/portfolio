@@ -45,7 +45,7 @@ const Home = () => {
           I'm an Indian based Software Engineer and Full Stack Developer who enjoys building efficient and reliable applications. I focus on writing clean, maintainable code and creating solutions that are practical, scalable, and user-friendly. I’m always learning, improving my problem-solving skills, and striving to build software that solves real-world problems.
         </p>
 
-        <Link to="/about">
+        <Link to="/about" className="w-fit">
           <PageButton Icon={ArrowRight} text="more about me" />
         </Link>
 

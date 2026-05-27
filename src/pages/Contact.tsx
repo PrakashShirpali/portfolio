@@ -1,7 +1,7 @@
 import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { MailOpen, Map, Phone } from "lucide-react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 import { ContactForm } from "@/components/forms/contact-form";
 
 const Contact = () => {
@@ -36,6 +36,10 @@ const Contact = () => {
       Sicon: FaLinkedin,
       Slink: "https://www.linkedin.com/in/prakashshirpali"
     },
+    {
+      Sicon: FaInstagramSquare,
+      Slink: "https://www.instagram.com/shirpali_d_prakash"
+    }
   ];
 
 
