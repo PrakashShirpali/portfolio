@@ -21,7 +21,6 @@ export default defineConfig({
         manualChunks: {
           react: ["react", "react-dom"],
           router: ["react-router-dom"],
-          redux: ["@reduxjs/toolkit", "react-redux"],
           forms: ["react-hook-form", "@hookform/resolvers", "zod"],
           motion: ["framer-motion"],
           icons: ["react-icons", "lucide-react"],
