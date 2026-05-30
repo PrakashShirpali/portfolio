@@ -20,25 +20,25 @@ const Home = () => {
 
         <div className="text-mtheme flex font-bold text-5xl max-sm:text-3xl max-md:text-center relative">
           <Minus className="max-md:hidden relative bottom-2" size={64} />
-          <span className="font-(family-name:--font-poppin) uppercase">I'm Prakash Shirpali.</span>
+          <span className="font-(family-name:--font-poppin) uppercase text-nowrap">I'm Prakash Shirpali.</span>
         </div>
 
         <TypeAnimation
           sequence={[
             "Software Engineer",
             1000,
-            "",                // delete text
+            "",
             0,
             "Full Stack Developer",
             1000,
-            "",                // delete text
+            "",
             0,
           ]}
           wrapper="span"
           speed={20}
           repeat={Infinity}
           cursor={false}
-          className="uppercase font-bold text-5xl text-pforeground font-(family-name:--font-poppin) max-sm:text-3xl max-md:text-center h-12"
+          className="uppercase font-bold text-5xl text-pforeground font-(family-name:--font-poppin) max-sm:text-2xl max-md:text-center h-12 text-nowrap"
         />
 
         <p className="w-full leading-8 my-6 px-2 text-base text-pforeground font-(family-name:--font-open) max-md:px-4 max-md:text-center">

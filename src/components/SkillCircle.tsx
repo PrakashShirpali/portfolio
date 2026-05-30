@@ -47,7 +47,7 @@ const SkillCircle = ({ name, percent }: SkillCircleProps) => {
         </div>
       </motion.div>
 
-      <p className="text-pforeground tracking-wide">{name}</p>
+      <p className="text-pforeground tracking-wide text-center">{name}</p>
 
     </div>
   );

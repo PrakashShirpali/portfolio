@@ -122,7 +122,7 @@ const About = () => {
 
       <div className="flex flex-col items-center pt-20 relative left-[50vw] -translate-x-1/2">
         <h1 className="text-2xl font-bold uppercase mb-6 text-pforeground max-sm:text-xl">My Skills</h1>
-        <div className="grid grid-cols-4 max-md:grid-cols-2 gap-y-6 gap-x-24 mt-4">
+        <div className="grid grid-cols-4 max-md:grid-cols-2 gap-y-8 md:gap-x-24 mt-4">
           {skills.map((skill, index) => (
             <SkillCircle key={index} name={skill.name} percent={skill.percent} />
           ))}
