@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { contactSchema } from "@/schemas/contact-schema"
 import type { ContactSchemaType } from "@/schemas/contact-schema"
 
-import { useSendMessageMutation } from "@/store/api/contactApi"
+import { sendMessage } from "@/services/contact-service";
 
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -15,39 +15,38 @@ import { Send } from "lucide-react"
 
 export function ContactForm() {
 
-  const [sendMessage, { isLoading }] = useSendMessageMutation()
-
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors }
+    formState: {
+      errors,
+      isSubmitting,
+    },
   } = useForm<ContactSchemaType>({
-    resolver: zodResolver(contactSchema)
-  })
+    resolver: zodResolver(contactSchema),
+  });
 
   async function onSubmit(data: ContactSchemaType) {
-
     if (data.website) {
-      return
+      return;
     }
 
-    const toastId = toast.loading("Sending message...")
+    const toastId = toast.loading("Sending message...");
 
     try {
+      await sendMessage(data);
 
-      await sendMessage(data).unwrap()
+      toast.success("Message sent!", {
+        id: toastId,
+      });
 
-      toast.success("Message sent!", { id: toastId })
-
-      reset()
-
-    } catch (error) {
-
-      toast.error("Failed to send message", { id: toastId })
-
+      reset();
+    } catch {
+      toast.error("Failed to send message", {
+        id: toastId,
+      });
     }
-
   }
 
   return (
@@ -116,7 +115,7 @@ export function ContactForm() {
       <PageButton
         type="submit"
         Icon={Send}
-        text={isLoading ? "Sending..." : "Send Message"}
+        text={isSubmitting ? "Sending..." : "Send Message"}
       />
 
     </form>

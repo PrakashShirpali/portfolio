@@ -27,18 +27,18 @@ const About = () => {
   ];
 
   const skills = [
-    { name: "React", percent: 80 },
-    { name: "TypeScript", percent: 70 },
-    { name: "Tailwind CSS", percent: 80 },
-    { name: "Next.js", percent: 60 },
-    { name: "Springboot", percent: 70 },
-    { name: "Laravel", percent: 70 },
-    { name: "PostgreSQL", percent: 70 },
-    { name: "GitHub", percent: 60 },
-    { name: "Docker", percent: 60 },
-    { name: "Java", percent: 70 },
-    { name: "Python", percent: 60 },
-    { name: "PHP", percent: 50 },
+    { name: "Next.js", percent: 80 },
+    { name: "TypeScript", percent: 85 },
+    { name: "tailwindcss", percent: 90 },
+    { name: "Java", percent: 75 },
+    { name: "Spring Boot REST APIs", percent: 75 },
+    { name: "PostgreSQL", percent: 80 },
+    { name: "GitHub", percent: 80 },
+    { name: "Docker", percent: 70 },
+    { name: "Python", percent: 70 },
+    { name: "LangChain", percent: 70 },
+    { name: "FastAPI", percent: 70 },
+    { name: "RAG", percent: 70 },
   ];
 
   const experiences = [
